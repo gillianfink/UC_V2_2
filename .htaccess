@@ -1,0 +1,3 @@
+RewriteBase /
+RewriteEngine On
+RewriteRule ^about.html about-2.html [L]
