@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    height:100vh;
+    width:100%;
+    background-color: #f2f1ee;
+}
+
+@font-face {
+  font-family: FoundersGroteskMonoMedium;
+  src: url(fonts/founders-grotesk-mono-web-medium.woff);
+}
+
+@font-face {
+  font-family: FoundersGroteskMonoRegular;
+  src: url(fonts/founders-grotesk-mono-web-regular.woff);
+}
+
+.header2 {
+    width:100%;
+    height:85px;
+    position:fixed;
+    background-color: #f2f1ee;
+    background: linear-gradient(#f2f1ee, 85%, rgba(255, 255, 255, 0));
+    z-index: 2;
+}
+.logo2 {
+    background: url("images/utendahl.png") no-repeat;
+    background-size: 100%;
+    width: 190px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.coffee {
+    position: relative;
+    background: url("images/coffee.png") no-repeat;
+    background-size: 100%;
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    top: 18vh;
+    margin-bottom: 20px;
+}
+
+
+.contactinfo {
+    color: #140b06;
+    position: relative;
+    text-transform: uppercase;
+    font-family: FoundersGroteskMonoRegular;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+    top: 18vh;
+}
+
+a {
+    font-family: FoundersGroteskMonoMedium;
+}
+
+
+.nav {
+    position: fixed;
+    font-family: FoundersGroteskMonoMedium;
+    font-size: 27px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+    text-decoration: none;
+    z-index: 4;
+
+}
+
+#about {
+    top: 12px;
+    left: 20px;
+}
+
+.nav:hover {
+    color: #f2f1ee;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#work {
+    top: 12px;
+    right: 20px;
+}
+
+#team {
+    bottom: 12px;
+    left: 20px;
+}
+
+#contact {
+    bottom: 12px;
+    right: 20px;
+}
+
+#nav-icon3 {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 6;
+    display: none;
+}
+
+#nav-icon3 span {
+  display: none;
+  position: fixed;
+  height: 2px;
+  width: 30px;
+  background: #140b06;
+  opacity: 1;
+  z-index: 5;
+  right: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 22px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 32px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 42px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+.mobilemenu {
+    position: fixed;
+    background-color: #f2f1ee;
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 4;
+
+}
+
+.mobilenav {
+    position: fixed;
+    z-index: 5;
+    margin-bottom: 50px;
+    left: 50%; 
+    -webkit-transform: translate(-50%, 0); 
+    font-family: FoundersGroteskMonoMedium;
+    text-decoration: none;
+    font-size: 50px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#aboutmobile {
+    top: 23vh;
+}
+
+#workmobile {
+    top: 35vh;
+}
+
+#teammobile {
+    top: 47vh;
+}
+
+#contactmobile {
+    top: 59vh;
+}
+
+@media only screen and (max-width: 1500px) {
+
+
+.nav {
+    font-size: 20px;
+}
+
+
+.logo2 {
+    width: 142px;
+    height: 32px;
+}
+
+
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+
+.nav {
+    font-size: 18px;
+}
+
+.coffee {
+    width: 200px;
+    height: 250px;
+    top: 18vh;
+    margin-bottom: 5px;
+}
+
+
+.contactinfo {
+    color: #140b06;
+    position: relative;
+    text-transform: uppercase;
+    font-family: FoundersGroteskMonoMedium;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    top: 18vh;
+}
+
+
+}
+
+
+@media only screen and (max-width: 1030px) {
+
+.nav {
+    font-size: 18px;
+}
+
+.coffee {
+    width: 180px;
+    height: 230px;
+    top: 18vh;
+    margin-bottom: 0px;
+}
+
+
+.contactinfo {
+    color: #140b06;
+    position: relative;
+    text-transform: uppercase;
+    font-family: FoundersGroteskMonoMedium;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    top: 18vh;
+}
+
+
+}
+
+
+@media only screen and (max-width: 860px) {
+
+    .nav {
+    font-size: 16px;
+}
+
+.coffee {
+    width: 150px;
+    height: 200px;
+    top: 18vh;
+    margin-bottom: -15px;
+}
+
+
+.contactinfo {
+    color: #140b06;
+    position: relative;
+    text-transform: uppercase;
+    font-family: FoundersGroteskMonoMedium;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    top: 18vh;
+}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.nav {
+    display: none;
+}
+
+#nav-icon3 {
+    display: block;
+}
+
+#nav-icon3 span {
+  display: block;
+
+}
+
+.logo2 {
+    width: 190px;
+    height: 40px;
+    margin-top: 13px;
+}
+
+.coffee {
+    width: 150px;
+    height: 200px;
+    top: 20vh;
+    margin-bottom: -15px;
+}
+
+.contactinfo {
+    color: #140b06;
+    position: relative;
+    text-transform: uppercase;
+    font-family: FoundersGroteskMonoMedium;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    top: 20vh;
+}
+
+}
+
+@media only screen and (max-width: 350px) {
+
+.mobilenav {
+    font-size: 40px;
+}
+
+}
+

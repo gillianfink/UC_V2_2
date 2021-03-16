@@ -1,0 +1,976 @@
+body {
+    margin: 0;
+    height:100vh;
+    width:100%;
+    background-color: #f2f1ee;
+}
+
+@font-face {
+  font-family: FoundersGroteskMonoMedium;
+  src: url(fonts/founders-grotesk-mono-web-medium.woff);
+}
+
+@font-face {
+  font-family: FoundersGroteskMonoRegular;
+  src: url(fonts/founders-grotesk-mono-web-regular.woff);
+}
+
+.header2 {
+    width:100%;
+    height:85px;
+    position:fixed;
+    background-color: #f2f1ee;
+    background: linear-gradient(#f2f1ee, 85%, rgba(255, 255, 255, 0));
+    z-index: 2;
+}
+.logo2 {
+    background: url("images/utendahl.png") no-repeat;
+    background-size: 100%;
+    width: 190px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.biglist {
+    color: #140b06;
+    position: relative;
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    letter-spacing: -.065em;
+    text-align: center;
+    font-size: 250px;
+    line-height: 250px;
+    width: 55vw;
+    padding: 0;
+    top: 10vh;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 300px;
+}
+
+
+.bigitem {
+/*  height: 250px;*/
+/*  display: inline-block;*/
+
+}
+
+.bigitem:hover {
+    font-style: italic;
+    text-decoration: line-through;
+    webkit-transition: all 300ms ease;
+    moz-transition: all 300ms ease;
+    ms-transition: all 300ms ease;
+    o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+
+
+#allisontxt {
+
+  
+}
+
+.teamphoto {
+    width: 470px;
+    height: 470px;
+}
+
+
+#madisonimg {
+    background: url("images/madison.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 40vh;
+    right: 2vw;
+    background-size: 100%;
+}
+
+
+#allisonimg {
+    background: url("images/allison.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 30vh;
+    left: 3vw;
+    background-size: 100%;
+}
+
+#zoeimg {
+    background: url("images/zoe.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 12vh;
+    right: 7vw;
+    background-size: 100%;
+}
+
+#toriimg {
+    background: url("images/tori.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 25vh;
+    left: 7vw;
+    background-size: 100%;
+}
+
+#nikoleimg {
+    background: url("images/nikole.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 35vh;
+    right: 3vw;
+    background-size: 100%;
+}
+
+
+#graceimg {
+    background: url("images/grace.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 20vh;
+    right: 3vw;
+    background-size: 100%;
+}
+
+#gillianimg {
+    background: url("images/gillian.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 42vh;
+    left: 5vw;
+    background-size: 100%;
+}
+
+#hawaimg {
+    background: url("images/hawa.png") no-repeat;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    bottom: 20vh;
+    left: 7vw;
+    background-size: 100%;
+}
+
+
+.nav {
+    position: fixed;
+    font-family: FoundersGroteskMonoMedium;
+    font-size: 27px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+    text-decoration: none;
+    z-index: 4;
+
+}
+
+#about {
+    top: 12px;
+    left: 20px;
+}
+
+.nav:hover {
+    color: #f2f1ee;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#work {
+    top: 12px;
+    right: 20px;
+}
+
+#team {
+    bottom: 12px;
+    left: 20px;
+}
+
+#contact {
+    bottom: 12px;
+    right: 20px;
+}
+
+#nav-icon3 {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 9;
+    display: none;
+}
+
+#nav-icon3 span {
+  display: none;
+  position: fixed;
+  height: 2px;
+  width: 30px;
+  background: #140b06;
+  opacity: 1;
+  z-index: 5;
+  right: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 22px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 32px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 42px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+.mobilemenu {
+    position: fixed;
+    background-color: #f2f1ee;
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 8;
+
+}
+
+.mobilenav {
+    position: fixed;
+    z-index: 8;
+    margin-bottom: 50px;
+    left: 50%; 
+    -webkit-transform: translate(-50%, 0); 
+    font-family: FoundersGroteskMonoMedium;
+    text-decoration: none;
+    font-size: 50px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#aboutmobile {
+    top: 23vh;
+}
+
+#workmobile {
+    top: 35vh;
+}
+
+#teammobile {
+    top: 47vh;
+}
+
+#contactmobile {
+    top: 59vh;
+}
+
+.mobilelist {
+    display: none;
+    position: relative;
+}
+
+.collapsible {
+  background-color: #f2f1ee;
+  color: #140b06;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+    background-color: rgba(247,242,239,0);
+}
+
+button { 
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 70px;
+    width: 100%;
+    letter-spacing: -.065em;
+ }
+
+/*.active, .collapsible:hover {
+    font-style: italic;
+    text-decoration: line-through;
+}*/
+
+
+.content {
+  display: none;
+  overflow: hidden;
+    width: 85vw;
+    height: 85vw;
+}
+
+#madisonimgmobile {
+    background: url("images/madison.png") no-repeat;
+    background-size: 100%;
+    margin-left: 14vw;
+    margin-bottom: -25px;
+    margin-top: 15px;
+}
+
+#allisonimgmobile {
+    background: url("images/allison.png") no-repeat;
+    background-size: 100%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+#zoeimgmobile {
+    background: url("images/zoe.png") no-repeat;
+    background-size: 100%;
+    margin-left: 15vw;
+    margin-bottom: -25px;
+    margin-top: 15px;
+}
+
+#toriimgmobile {
+    background: url("images/tori.png") no-repeat;
+    background-size: 100%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+#nikoleimgmobile {
+    background: url("images/nikole.png") no-repeat;
+    background-size: 100%;
+    margin-left: 14vw;
+    margin-bottom: -25px;
+    margin-top: 15px;
+}
+
+#graceimgmobile {
+    background: url("images/grace.png") no-repeat;
+    background-size: 100%;
+    margin-left: 14vw;
+    margin-bottom: -25px;
+    margin-top: 15px;
+}
+
+#gillianimgmobile {
+    background: url("images/gillian.png") no-repeat;
+    background-size: 100%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+#hawaimgmobile {
+    background: url("images/hawa.png") no-repeat;
+    background-size: 100%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    position: relative;
+    height: 270px;
+background: rgb(20,11,6);
+background: linear-gradient(0deg, rgba(20,11,6,1) 40%, rgba(20,11,6,0.95) 48%, rgba(20,11,6,0.85) 58%, rgba(20,11,6,0.75) 65%, rgba(20,11,6,0.5) 77%, rgba(20,11,6,0.25) 87%, rgba(20,11,6,0.15) 90%, rgba(20,11,6,0.07) 94%, rgba(20,11,6,0) 97%);
+    color: #f2f1ee;
+    z-index: 7;
+
+}
+
+.footercontents{
+    position: relative;
+    width: 1220px;
+    display: flex;
+    flex-direction: row;
+        left: 50%; 
+    -webkit-transform: translate(-50%, 0); 
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    margin-top: 100px;
+}
+
+#icon1 {
+    background: url("images/icon2.png") no-repeat;
+    background-size: 100%;
+}
+
+.description {
+    padding-right: 70px;
+    padding-left: 20px;
+}
+
+.footertitle {
+    font-family: FoundersGroteskMonoMedium;
+    margin-top: 100px;
+    margin-bottom: 12px;
+}
+
+.footerbody {
+    font-family: FoundersGroteskMonoRegular;
+    font-size: 14px;
+}
+
+.navlist {
+    font-family: FoundersGroteskMonoMedium;
+    width: 70px;
+    line-height: 24px;
+    margin-top: 98px;
+    padding-right: 70px;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: #f2f1ee;
+}
+
+.email {
+    padding-right: 70px;
+}
+
+.social {
+    padding-right: 70px;
+}
+
+#emaillink {
+    text-decoration: underline;
+}
+
+.social {
+    padding-right: 70px;
+}
+
+#iglink{
+    text-decoration: underline;
+}
+
+#linkedinlink{
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+
+.nav {
+    font-size: 20px;
+}
+
+.logo2 {
+    width: 142px;
+    height: 32px;
+}
+
+.biglist {
+    font-size: 200px;
+    line-height: 200px;
+    top: 15vh;
+}
+
+.teamphoto {
+    width: 410px;
+    height: 410px;
+}
+
+#madisonimg {
+    bottom: 35vh;
+}
+
+#graceimg {
+    bottom: 35vh;
+}
+
+
+}
+
+@media only screen and (max-width: 1220px) {
+    .footer {
+        font-size: 14px;
+        height: 200px;
+    }
+
+    .footerbody {
+        font-size: 12px;
+    }
+
+    .icon {
+        height: 75px;
+        width: 75px;
+        margin: 50px;
+        margin-top: 75px;
+    }
+
+    .footercontents{
+    width: 1000px;
+    height: 100%;
+    }
+
+    .description {
+    padding-right: 50px;
+    padding-left: 0px;
+    }
+
+    .footertitle {
+    margin-top: 70px;
+    margin-bottom: 12px;
+    }
+
+    .navlist {
+    width: 50px;
+    line-height: 20px;
+    margin-top: 68px;
+    padding-right: 50px;
+    }
+
+    .email {
+    padding-right: 50px;
+    }
+
+    .social {
+    padding-right: 50px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1150px) {
+
+.teamphoto {
+    width: 360px;
+    height: 360px;
+}
+
+.nav {
+    font-size: 18px;
+}
+
+}
+
+
+@media only screen and (max-width: 1030px) {
+
+.biglist {
+    font-size: 180px;
+    line-height: 180px;
+    top: 15vh;
+}
+
+.teamphoto {
+    width: 300px;
+    height: 300px;
+}
+
+.nav {
+    font-size: 18px;
+}
+
+}
+
+@media only screen and (max-height: 700px){
+
+    .teamphoto {
+    width: 360px;
+    height: 360px;
+    }
+
+}
+
+@media only screen and (max-height: 700px) and (max-width: 1500px){
+
+    .teamphoto {
+    width: 350px;
+    height: 350px;
+    }
+
+}
+
+@media only screen and (max-height: 700px) and (max-width: 1100px){
+
+    .teamphoto {
+    width: 310px;
+    height: 310px;
+    }
+
+}
+
+@media only screen and (max-height: 700px) and (max-width: 1000px){
+
+    .teamphoto {
+    width: 280px;
+    height: 280px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer {
+        font-size: 12px;
+        height: 180px;
+    }
+
+    .footerbody {
+        font-size: 10px;
+    }
+
+    .icon {
+        height: 60px;
+        width: 60px;
+        margin: 50px;
+        margin-left: 40px;
+        margin-top: 70px;
+
+    }
+
+    .footercontents{
+    width: 840px;
+    height: 100%;
+    }
+
+    .description {
+    padding-right: 40px;
+    padding-left: 0px;
+    }
+
+    .footertitle {
+    margin-top: 70px;
+    margin-bottom: 8px;
+    }
+
+    .navlist {
+    width: 50px;
+    line-height: 18px;
+    margin-top: 68px;
+    padding-right: 40px;
+    }
+
+    .email {
+    padding-right: 40px;
+    }
+
+    .social {
+    padding-right: 40px;
+    }
+
+    .biglist {
+    font-size: 150px;
+    line-height: 150px;
+    top: 15vh;
+}
+
+}
+
+
+@media only screen and (max-width: 860px) {
+    .biglist {
+    font-size: 130px;
+    line-height: 130px;
+    width: 80vw;
+    top: 15vh;
+    }  
+
+    .nav {
+    font-size: 16px;
+}
+
+}
+
+
+@media only screen and (max-width: 840px) {
+
+    .footer {
+        font-size: 10px;
+        height: 150px;
+    }
+
+    .footerbody {
+        font-size: 8px;
+    }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+        margin: 50px;
+        margin-left: 30px;
+        margin-top: 60px;
+    }
+
+    .footercontents{
+    width: 700px;
+    height: 100%;
+    }
+
+    .description {
+    padding-right: 30px;
+    padding-left: 0px;
+    }
+
+    .footertitle {
+    margin-top: 60px;
+    margin-bottom: 8px;
+    }
+
+    .navlist {
+    width: 50px;
+    line-height: 14px;
+    margin-top: 58px;
+    padding-right: 30px;
+    }
+
+    .email {
+    padding-right: 30px;
+    }
+
+    .social {
+    padding-right: 30px;
+    }
+
+    .teamphoto {
+    width: 230px;
+    height: 230px;
+}
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .footer {
+    position: relative;
+    margin-top: 0px;
+    height: 700px;
+background: rgb(20,11,6);
+background: linear-gradient(0deg, rgba(20,11,6,1) 40%, rgba(20,11,6,0.95) 48%, rgba(20,11,6,0.85) 58%, rgba(20,11,6,0.75) 65%, rgba(20,11,6,0.5) 77%, rgba(20,11,6,0.25) 87%, rgba(20,11,6,0.15) 90%, rgba(20,11,6,0.07) 94%, rgba(20,11,6,0) 97%);
+    color: #f2f1ee;
+    z-index: 7;
+    }
+
+    .footercontents{
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    display: block;;
+    left: 0px; 
+    -webkit-transform: translate(0%, 0); 
+    }
+
+    .icon {
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    top: 120px;
+    margin-bottom: 150px;
+
+    }
+
+#icon1 {
+    background: url("images/icon2.png") no-repeat;
+    background-size: 100%;
+}
+
+.description {
+    position: relative;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+}
+
+.footertitle {
+    font-family: FoundersGroteskMonoMedium;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footerbody {
+    font-family: FoundersGroteskMonoRegular;
+    font-size: 14px;
+}
+
+.navlist {
+    position: relative;
+    font-family: FoundersGroteskMonoMedium;
+    width: 65px;
+    display: block;
+    line-height: 24px;
+    margin-top: 0px;
+    padding-right: 0px;
+    text-decoration: underline;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #f2f1ee;
+}
+
+.email {
+    position: relative;
+    padding-right: 0px;
+    margin-bottom: 30px;
+}
+
+#emaillink {
+    text-decoration: underline;
+}
+
+.social {
+    position: relative;
+    padding-right: 0px;
+    bottom: 0px;
+}
+
+#iglink{
+    text-decoration: underline;
+}
+
+#linkedinlink{
+    text-decoration: underline;
+}
+
+.header2 {
+    z-index: 8;
+}
+
+#about {
+    z-index: 9;
+}
+
+#work {
+    z-index: 9;
+}
+
+    .biglist {
+    font-size: 110px;
+    line-height: 110px;
+    width: 80vw;
+    top: 15vh;
+    }  
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.nav {
+    display: none;
+}
+
+#nav-icon3 {
+    display: block;
+}
+
+#nav-icon3 span {
+  display: block;
+
+}
+
+.logo2 {
+    width: 190px;
+    height: 40px;
+    margin-top: 13px;
+}
+
+
+.biglist {
+
+    font-size: 75px;
+    line-height: 75px;
+    width: 75vw;
+    top: 15vh;
+    display: none;
+}
+
+.mobilelist {
+    display: block;
+    top: 12vh;
+    margin-bottom: 15vh;
+}
+
+.header2 {
+    z-index: 8;
+}
+
+
+}
+
+
+@media only screen and (max-width: 350px) {
+
+
+.footerbody {
+    font-size: 12px;
+}
+
+.header2 {
+    z-index: 8;
+}
+
+button {
+    font-size: 55px;
+    line-height: 55px;
+}
+
+.mobilenav {
+    font-size: 40px;
+}
+
+.mobilelist {
+    top: 17vh;
+    margin-bottom: 20vh;
+}
+
+}
+

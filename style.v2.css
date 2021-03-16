@@ -1,0 +1,521 @@
+body {
+    margin: 0;
+    height:100vh;
+    width:100%;
+    background-color: #f2f1ee;
+    scroll-snap-type: mandatory;
+    transition: 0.3s background-color;
+/*    cursor: url("images/hand.png"), auto;*/
+}
+
+/*.changeColor body {
+    background-color: #cccc00;
+}*/
+
+@font-face {
+  font-family: FoundersGroteskMonoMedium;
+  src: url(fonts/founders-grotesk-mono-web-medium.woff);
+}
+
+@font-face {
+  font-family: FoundersGroteskMonoRegular;
+  src: url(fonts/founders-grotesk-mono-web-regular.woff);
+}
+
+.header {
+    width:100%;
+    height:170px;
+    position:fixed;
+    top:0;
+    left:0;
+    transition: height 500ms, background 500ms;
+}
+
+.logo {
+    background: url("images/utendahl.png") no-repeat;
+    background-size: 100%;
+    width: 800px;
+    height: 170px;
+    margin: auto;
+    margin-top: 30vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.creative {
+    background: url("images/creative.png") no-repeat;
+    background-size: 100%;
+    width: 240px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.header .small {
+   /* height: 40px;*/
+}
+
+.small .logo {
+    background: url("images/utendahl.png") no-repeat;
+    background-size: 100%;
+    width: 190px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    transition: all 0.4s ease-in-out 0s;
+
+}
+
+.fade .creative {
+    background: url("images/creative.png") no-repeat;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out 0s;
+    opacity: 0;
+}
+
+.arrow {
+    margin: auto;
+    margin-top: 10vh;
+    width:10px;
+    height:10px;
+    border:2px solid #140b06;
+    border-width:2px 2px 0 0;
+    transform:translateX(-1px) rotate(135deg);
+}
+
+.fade .arrow {
+    opacity: 0;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.smiley {
+    background: url("images/smiley.png") no-repeat;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.intro {
+    position: relative;
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    letter-spacing: -.065em;
+    text-align: center;
+    font-size: 250px;
+    line-height: 200px;
+    color: #140b06;
+    width: 75vw;
+    margin: auto;
+    bottom: -105%;
+    padding-bottom: 25vh;
+    transition: all 0.4s ease-in-out 0s;
+    cursor: default;
+}
+
+#kern{
+    letter-spacing: -.11em;
+}
+
+#italic {
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.nav {
+    position: fixed;
+    font-family: FoundersGroteskMonoMedium;
+    font-size: 27px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+    text-decoration: none;
+
+}
+
+#about {
+    top: 12px;
+    left: 20px;
+    z-index: 10;
+}
+
+.nav:hover {
+    color: #f2f1ee;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#work {
+    top: 12px;
+    right: 20px;
+    z-index: 10;
+}
+
+#team {
+    bottom: 12px;
+    left: 20px;
+}
+
+#contact {
+    bottom: 12px;
+    right: 20px;
+}
+
+#nav-icon3 {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 9;
+    display: none;
+}
+
+
+
+#nav-icon3 span {
+  display: none;
+  position: fixed;
+  height: 2px;
+  width: 30px;
+  background: #140b06;
+  opacity: 1;
+  z-index: 5;
+  right: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 22px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 32px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 42px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 32px;
+  width: 0%;
+  right: 40px;
+}
+
+.mobilemenu {
+    position: fixed;
+    background-color: #f2f1ee;
+    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 4;
+
+}
+
+.mobilenav {
+    position: fixed;
+    z-index: 5;
+    margin-bottom: 50px;
+    left: 50%; 
+    -webkit-transform: translate(-50%, 0); 
+    font-family: FoundersGroteskMonoMedium;
+    text-decoration: none;
+    font-size: 50px;
+    color: #140b06;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #140b06;
+}
+
+#aboutmobile {
+    top: 23vh;
+}
+
+#workmobile {
+    top: 35vh;
+}
+
+#teammobile {
+    top: 47vh;
+}
+
+#contactmobile {
+    top: 59vh;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 200px;
+    line-height: 170px;
+    width: 75vw;
+    bottom: -105%;
+    padding-bottom: 20vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.nav {
+    font-size: 20px;
+}
+
+.small .logo {
+    width: 142px;
+    height: 32px;
+}
+
+.smiley {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 30px;
+}
+
+
+}
+
+@media only screen and (max-width: 1300px) {
+
+.logo {
+    width: 650px;
+    height: 150px;
+    margin-top: 30vh;
+
+}
+
+.creative {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+
+}
+
+}
+
+
+@media only screen and (max-width: 1150px) {
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 170px;
+    line-height: 150px;
+    width: 75vw;
+    bottom: -105%;
+    padding-bottom: 20vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.smiley {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    margin-top: 30vh;
+}
+
+.nav {
+    font-size: 18px;
+}
+
+}
+
+
+@media only screen and (max-width: 1030px) {
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 150px;
+    line-height: 120px;
+    width: 75vw;
+    bottom: -105%;
+    padding-bottom: 23vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.smiley {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 650px;
+    height: 150px;
+    margin-top: 30vh;
+}
+
+.creative {
+    background: url("images/creative.png") no-repeat;
+    background-size: 100%;
+    width: 200px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.nav {
+    font-size: 18px;
+}
+
+.logo {
+    width: 600px;
+    height: 140px;
+    margin-top: 30vh;
+
+}
+
+.creative {
+    width: 160px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+}
+
+@media only screen and (max-width: 900px) {
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 120px;
+    line-height: 100px;
+    width: 75vw;
+    bottom: -105%;
+    padding-bottom: 23vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+}
+
+@media only screen and (max-width: 860px) {
+
+        .nav {
+    font-size: 16px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 100px;
+    line-height: 85px;
+    width: 75vw;
+    bottom: -105%;
+    padding-bottom: 23vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+.nav {
+    display: none;
+}
+
+#nav-icon3 {
+    display: block;
+}
+
+#nav-icon3 span {
+  display: block;
+
+}
+
+.logo {
+    width: 350px;
+    height: 100px;
+    margin-top: 35vh;
+}
+
+.creative {
+    margin-top: -10px;
+}
+
+.small .logo {
+    width: 190px;
+    height: 40px;
+    margin-top: 13px;
+}
+
+.intro {
+    letter-spacing: -.065em;
+    font-size: 75px;
+    line-height: 70px;
+    width: 95vw;
+    bottom: -110%;
+    padding-bottom: 40vh;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+}
+
+@media only screen and (max-width: 350px) {
+
+.logo {
+    width: 270px;
+    height: 90px;
+    margin-top: 35vh;
+}
+
+.creative {
+    width: 140px;
+}
+
+.intro {
+    font-size: 65px;
+    line-height: 60px;
+}
+
+.mobilenav {
+    font-size: 40px;
+}
+
+}
+
+
+
