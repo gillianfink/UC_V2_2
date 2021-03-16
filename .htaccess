@@ -1,2 +1,2 @@
-RewriteEngine on
-RewriteRule ^about about.v2.html [NC,L]
+RewriteEngine On
+RewriteRule   about   about.v2.html
