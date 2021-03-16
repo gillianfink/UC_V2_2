@@ -1,2 +1,1 @@
-RewriteEngine on
-RewriteRule ^(.*)-[0-9]+\.html$ /$1/ [L,R=301]
+
