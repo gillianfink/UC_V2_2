@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^about about.v2.html [NC,L]
